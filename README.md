@@ -10,47 +10,64 @@ More details at https://gitlab.com/zoran-grujic/etalonpy
 
 Only Arduino DUE.
 
-# Komande
-
-whois? 
--------------------------
-Odgovor: Etalon lock-in
-
-mode?
----------------------------
-Odgovor: mode: scan ili mode: lock-in
+# Commands
 
 scan 2345 2345
 ---------------------------
-Postavlja HV PZT preko SPI 16 bit dac na vrednost 2345 * 4,096/(2&16)
+Set HV PZT over SPI 16 bit dac to be 2345 * 4,096/(2&16)
 
-Odgovor: ako dva broja nisu ista prijavljuje grešku
+Responce: 
+Error reporting: report error if numbers are not equal
+
+
+whois? 
+-------------------------
+Responce: Etalon lock-in
+
+mode?
+---------------------------
+Responce: mode: scan or mode: lock-in
 
 phase 9001 9001
 ----------------------
 Postavlja fazu na 90,01 deg.
 
-Odgovor: ako dva broja nisu ista prijavljuje grešku
+Responce: phase 9001
+Error reporting: report error if numbers are not equal
+
+moveHV 60 60
+---------------------------
+Increase OC position by 60 
+
+Responce: none
+Error reporting: report error if numbers are not equal
 
 lock 32768 32768
 -------------------------
-Pokušava da se lokuje na 4,096/2 V HV PZT-a. 
+Try to lock at 4,096/2 V HV PZT 
 
-Odgovor: mode: lock
-
-Odgovor: Lok point: 32768
+Responce: mode: lock
+Responce: Lok point: 32768
+Error reporting: report error if numbers are not equal
 
 PI 587 654
 -------------------------
 Postavlja integralni (587) i proporcionalni deo (654)
 
+Responce: none
+
+lockpoint 54 54 
+----------------------------
+
+Responce: Lock point offset: 54
+Error reporting: report error if numbers are not equal
+
+center
+-----------------------------------
+call center finction if mode is lock
+
 FHVratio 1000 1000
 -----------------------------------
-Postavlja odnos HV i običnog PZT-ako
+Set HR and OC PZT ratio
 
-Odgovor: Ako brojevi nisu isti prijavljuje grešku
-
-
-
-
-
+Error reporting: report error if numbers are not equal
