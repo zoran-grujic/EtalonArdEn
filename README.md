@@ -71,3 +71,9 @@ FHVratio 1000 1000
 Set HR and OC PZT ratio
 
 Error reporting: report error if numbers are not equal
+
+
+## GIT
+
+Arduino Due code is here: https://github.com/zoran-grujic/EtalonArdEn.git
+GUI interface is here: https://github.com/zoran-grujic/EtalonPy.git
