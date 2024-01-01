@@ -4,7 +4,7 @@ Implementation of a lock-in amplifier for detection of 3-rd harmonic at 1.3 kHz.
 
 Use Arduino IDE to edit, compile and upload. 
 
-More details at https://gitlab.com/zoran-grujic/etalonpy
+More details at https://github.com/zoran-grujic/EtalonPy
 
 ## Compatibility
 
